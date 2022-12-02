@@ -28,7 +28,7 @@ const usuariosPut = async (req, res = response) => {
   if (password) {
     // Encriptar la contraseña
     const salt = bcryptjs.genSaltSync(); // vueltas a la contraseña
-    resto.password = bcryptjs.hashSync(password, salt) // Encriptar la contraseña en una sola vía
+    resto.password = bcryptjs.hashSync(password, salt); // Encriptar la contraseña en una sola vía
   }
   // Update de los elementos incluidos en 'resto', de acuerdo al id que pasamos como parámetro en la url.
   const usuario = await Usuario.findByIdAndUpdate(id, resto);

@@ -10,7 +10,7 @@ const { esRolValido, emailExiste, existeUsuarioById } = require('../helpers/db-v
 const { usuariosGet, 
         usuariosPut, 
         usuariosPost, 
-        usuariosDelete } = require('../controllers/usuarios.service');
+        usuariosDelete } = require('../controllers/usuarios.controller');
 
 const router = Router();
 
